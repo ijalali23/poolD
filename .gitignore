@@ -24,6 +24,22 @@ migrate_working_dir/
 #.vscode/
 
 # Flutter/Dart/Pub related
+# Flutter/Dart/Pub
+.dart_tool/
+.packages
+pubspec.lock
+# IntelliJ
+.idea/
+# VS Code
+.vscode/
+# Build outputs
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/Runner.xcworkspace/
+android/.gradle/
+android/app/build/
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
