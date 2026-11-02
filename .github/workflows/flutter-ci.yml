@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      # The runner's default Java is newer than the project's Gradle supports.
+      # Build with the JDK the Android project targets (JVM 17), not the runner's default.
       - name: Set up Java
         uses: actions/setup-java@v5
         with:
