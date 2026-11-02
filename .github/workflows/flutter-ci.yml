@@ -12,12 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
+
+      # Build with the JDK the Android project targets (JVM 17), not the runner's default.
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get
@@ -26,7 +33,7 @@ jobs:
         run: flutter analyze
 
       - name: Run unit tests
-        run: flutter test --no-cover
+        run: flutter test
 
       - name: Build APK
         run: flutter build apk --release
@@ -36,12 +43,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get

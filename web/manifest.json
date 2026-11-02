@@ -1,11 +1,11 @@
 {
-    "name": "poold_app",
-    "short_name": "poold_app",
+    "name": "poolD",
+    "short_name": "poolD",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "poolD - tilt the table, sink every ball.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
